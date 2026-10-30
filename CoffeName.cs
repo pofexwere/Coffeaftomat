@@ -16,7 +16,6 @@ namespace КофеАвтомат
 			lbldisplay.Click += (s, e) => this.OnClick(e);
 
 		}
-		public bool selected = false;
 		/// <summary>
 		/// Тип кофе (Эспрессо, Американо, Латте и т.д.).
 		/// Это то, что увидит главная форма в событии CoffeeSelected.

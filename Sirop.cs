@@ -15,7 +15,7 @@ namespace КофеАвтомат
 			InitializeComponent();
 			lblName.Click += (s, e) => this.OnClick(e);
 		}
-		public int count = 0;
+		public int count { get; private set; } = 0;
 		/// <summary>
 		/// Тип кофе (Эспрессо, Американо, Латте и т.д.).
 		/// Это то, что увидит главная форма в событии CoffeeSelected.
@@ -27,6 +27,14 @@ namespace КофеАвтомат
 		{
 			get => lblName.Text;
 			set => lblName.Text = value;
+		}
+		public void add()
+		{
+			count++;
+		}
+		public void reset()
+		{
+			count = 0;
 		}
 	}
 }

@@ -13,20 +13,24 @@ namespace КофеАвтомат
 		public coffeAftom()
 		{
 			InitializeComponent();
+			
 		}
+
 		private void Potstavka_Click(object sender, EventArgs e)
 		{
 			//MessageBox.Show(coffe.info());
 
+			Point InHand = LblinHand.Location;
+			Point InAfto = lblinAftom.Location;
 			if ((potstavka1.pos == 1) && potstavka1.IsFull)// в кофе машине
 			{
-				potstavka1.Location = new Point(335, 358);
+				potstavka1.Location = InHand;
 				potstavka1.take();
 				infoScrean1.Write("Асортимент");
 			}
 			else if (potstavka1.pos == 2)// "в руках"
 			{
-				potstavka1.Location = new Point(159, 358);
+				potstavka1.Location = InAfto;
 				potstavka1.remove();
 			}
 		}
@@ -43,17 +47,17 @@ namespace КофеАвтомат
 
 			infoScrean1.Write("Асортимент");
 
-			Shokosirop.count = 0;
-			Vanilsirop.count = 0;
-			Karamsirop.count = 0;
-			sugar.count = 0;	
+			Shokosirop.reset();
+			Vanilsirop.reset();
+			Karamsirop.reset();
+			sugar.reset();	
 		}
 		private async void Sirp_Click(object sender, EventArgs e)
 		{
 			if (potstavka1.InPlace)
 			{
 				Sirop sirp = sender as Sirop;
-				sirp.count += 1;
+				sirp.add();
 				potstavka1.addsirp();
 			}
 		}

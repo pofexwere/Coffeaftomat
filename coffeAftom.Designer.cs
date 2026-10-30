@@ -51,6 +51,8 @@
 			trash1 = new Trash();
 			stakans1 = new Stakans();
 			hats1 = new Hats();
+			lblinAftom = new Label();
+			LblinHand = new Label();
 			SuspendLayout();
 			// 
 			// Cofe_Mashine
@@ -259,11 +261,29 @@
 			hats1.TabIndex = 62;
 			hats1.Click += Hats_Click;
 			// 
+			// lblinAftom
+			// 
+			lblinAftom.AutoSize = true;
+			lblinAftom.Location = new Point(159, 358);
+			lblinAftom.Name = "lblinAftom";
+			lblinAftom.Size = new Size(0, 15);
+			lblinAftom.TabIndex = 63;
+			// 
+			// LblinHand
+			// 
+			LblinHand.AutoSize = true;
+			LblinHand.Location = new Point(335, 358);
+			LblinHand.Name = "LblinHand";
+			LblinHand.Size = new Size(0, 15);
+			LblinHand.TabIndex = 64;
+			// 
 			// coffeAftom
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = SystemColors.ControlDark;
+			Controls.Add(LblinHand);
+			Controls.Add(lblinAftom);
 			Controls.Add(hats1);
 			Controls.Add(stakans1);
 			Controls.Add(trash1);
@@ -315,5 +335,7 @@
 		private Trash trash1;
 		private Stakans stakans1;
 		private Hats hats1;
+		private Label lblinAftom;
+		private Label LblinHand;
 	}
 }
